@@ -14,6 +14,6 @@ clingo figurative_events.lp  temporal_axioms.lp input_speeding.lp figurative_bac
 
 clingo figurative_events.lp  temporal_axioms.lp  figurative_backbone.lp figurative_synthesis.lp figurative_constraints.lp figurative_judgements.lp input_2.lp figurative_interpretation_2.lp
 
-clingo input_leftright_6.lp temporal_axioms.lp spatial_synthesis.lp spatial_axioms.lp figurative_backbone.lp figurative_constraints.lp figurative_events.lp figurative_synthesis.lp figurative_judgements.lp
+clingo temporal_axioms.lp spatial_synthesis.lp  spatial_axioms.lp figurative_backbone.lp figurative_constraints.lp figurative_events.lp figurative_synthesis.lp input_space_simple.lp 
 
 At the moment it is not guaranteed that all other inputs are solved by the system as intended.

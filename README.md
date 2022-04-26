@@ -16,4 +16,4 @@ clingo figurative_events.lp  temporal_axioms.lp  figurative_backbone.lp figurati
 
 clingo input_leftright_6.lp temporal_axioms.lp spatial_synthesis.lp spatial_axioms.lp figurative_backbone.lp figurative_constraints.lp figurative_events.lp figurative_synthesis.lp figurative_judgements.lp
 
-At the moent it is not guaranteed that all other inputs are solved by the system as intended.
+At the moment it is not guaranteed that all other inputs are solved by the system as intended.

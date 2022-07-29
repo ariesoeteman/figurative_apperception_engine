@@ -1,19 +1,73 @@
 # figurative_apperception_engine
 
-This folder contains raw code for the figurative apperception engine. It may be used for grading, but it has not been properly structured or clean yet. This will be done in the near future
+# The source code for chapters 4 and 6 of my thesis: "Aritificial Understanding"
 
-The important files are figurative_events.lp, figurative_synthesis.lp, figurative_judgements.lp, temporal_axioms.lp, figurative_backbone.lp, figurative_constraints.lp. 
+The code in the 'code' directory is to a large extent copied from https://github.com/RichardEvans/apperception. All other code has been written by me.
 
-If one also wants to apply spatial synthesis, then spatial_synthesis.lp and spatial_axioms.lp must also be used.
 
-The input files start with 'input_', and often come with interpretation files that have the same name, but instead end with '_interpretation'
+## Installation instructions
 
-example commands:
+You need to have installed Haskell and Clingo (version 4.5 or above).
 
-clingo figurative_events.lp  temporal_axioms.lp input_speeding.lp figurative_backbone.lp figurative_synthesis.lp speeding_interpretation.lp figurative_constraints.lp figurative_judgements.lp 
+1. To install Haskell:
+    * go to https://www.haskell.org/downloads/
 
-clingo figurative_events.lp  temporal_axioms.lp  figurative_backbone.lp figurative_synthesis.lp figurative_constraints.lp figurative_judgements.lp input_2.lp figurative_interpretation_2.lp
+2. To install Clingo (version 4.5 or above):
+    * go to https://potassco.org/clingo/
 
-clingo temporal_axioms.lp spatial_synthesis.lp  spatial_axioms.lp figurative_backbone.lp figurative_constraints.lp figurative_events.lp figurative_synthesis.lp input_space_simple.lp 
+## Compilation instructions
 
-At the moment it is not guaranteed that all other inputs are solved by the system as intended.
+Once you have Haskell and Clingo installed, just run (from the root directory):
+   * `cd code`
+   * `cabal update`
+   * `cabal configure`
+   * `cabal new-build`
+   * `cabal install`
+   * `cd ..`
+
+## Examples
+
+Once the system is installed (see above), you are ready to try some examples. Note that only the final theory is provided as output in the terminal. The temporal and spatio-temporal structures are sets of atomic relations in the corresponding *'my_input'_results.txt* file in the temp folder.
+
+
+To run the examples, **make sure you are in the root directory called figurative_apperception**.
+
+
+Two sensors, one oscillates between on and off, while the other has the same reading throughout:
+   * `~/.cabal/bin/figsolve time simple.lp`
+
+A single sensor oscillating between on and off:
+   * `~/.cabal/bin/figsolve time simple_2.lp`
+
+A spatial construction consisting of 25 regions:
+   * `~/.cabal/bin/figsolve space space_simple.lp`
+
+
+Speeding carts and pushed pedals, where the input is a partial event structure:
+   * `~/.cabal/bin/figsolve time change.lp`
+
+
+A coffee maker,note that this example takes about 20 hours to find the right model, and much longer to prove that it is the minimal model:
+
+   * `~/.cabal/bin/figsolve time coffee.lp`
+
+
+A spatial construction with learned 'left' and 'right' movements:
+
+   * `~/.cabal/bin/figsolve space leftright.lp`
+
+
+A spatial construction in which a causal rule makes observations 'irreversible', note that this example takes about 24 hours:
+
+   * `~/.cabal/bin/figsolve space change.lp`
+
+
+## Understanding the output of the solve process
+
+When solve is run, it produces...
+* the theory *θ = (φ, I, R)* composed of...
+    * the initial conditions (*I*)
+    * the rules (*R*)
+
+* the temporal or spatio-temporal trace in the results file
+* Movement functions in the results file

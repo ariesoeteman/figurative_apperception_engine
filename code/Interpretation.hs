@@ -163,12 +163,10 @@ type TypeConceptMap = Map.Map Type [Concept]
 
 do_fig_template :: Bool -> Template -> String -> String -> String -> IO (String, String, String)
 do_fig_template add_const t dir input_f space_time = do
-    putStrLn $ "BLablabla??"
     let d = drop (length "data/") dir
     let input = take (length input_f - length ".lp") input_f
     let name = d ++ "_" ++ input
     gen_inits name t
-    -- putStrLn $ "BLa??"
     gen_subs name t
     gen_var_atoms name t
     gen_interpretation name t
@@ -1843,7 +1841,6 @@ instance Show PredicateType where
 -- In 'ILASP/directory_input.las' wordt de ILASP code geschreven
 -- 1) uit 'data_directory/input'
 -- 2) uit 'asp/ilasp.lp'
--- GEK want ik zie geen ILASP folder, en ook geen data_blabla
 write_ilasp :: String -> String -> Int -> Template -> Int -> IO ()
 write_ilasp d input maxv t recall = do
     let dir = "data_" ++ d

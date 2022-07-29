@@ -112,7 +112,6 @@ frame_coffee = Frame {
     value_concepts = [
         (C "temp", T "resource", (0, 10)) 
     ],
-    value_concepts = [],
     vars = [
         (V "x", T "machine"),
         (V "y", T "resource")
@@ -155,7 +154,6 @@ frame_speeding = Frame {
         ],
     input_concepts = [C "push", C "release", C "speed"],
     static_concepts = [],
-    value_concepts = [],
     vars = [
         (V "x", T "agent"),
         (V "y", T "cart")
@@ -226,7 +224,6 @@ frame_leftright = Frame {
     ],
     input_concepts = [],
     static_concepts = [],
-    value_concepts = [],
     vars = [
         (V "x", T "cell")
         ],

@@ -31,7 +31,11 @@ permanent(isa(t_sensor_2, obj_sensor_b)).
 1 { rule_head_co(R, CO) : head_content(CO) } 1 :- is_fig_rule(R), use_rule(R).
 
 is_regsucc_rule(r1).
-is_regsucc_rule(r2).
+is_causal_rule(r2).
+is_causal_rule(r3).
+is_causal_rule(r4).
+is_causal_rule(r5).
+is_causal_rule(r6).
 { use_rule(R) } :- is_regsucc_rule(R).
 { use_rule(R) } :- is_causal_rule(R).
 

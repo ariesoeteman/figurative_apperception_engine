@@ -1,0 +1,31 @@
+name:               figSolve
+version:            0.1.0.0
+synopsis:
+
+-- A longer description of the package.
+-- description:
+homepage:
+
+-- A URL where users can report bugs.
+-- bug-reports:
+license:            Apache-2.0
+author:             Arie Soeteman
+maintainer:         awsoeteman@hotmail.com
+build-type:          Simple
+-- extra-source-files:  
+cabal-version:       >=1.10
+-- A copyright notice.
+-- copyright:
+-- category:
+extra-source-files: CHANGELOG.md
+
+executable figSolve
+    main-is:          figsolve.hs
+
+    -- Modules included in this executable, other than Main.
+    other-modules: Interpretation, FigurativeTemplates
+  
+    -- other-extensions:    
+    build-depends:       base >=4.8, containers >=0.5, process >=1.6 && <1.7, split >=0.2 && <0.3, random >=1.1 && <1.2, text >=1.2 && <1.3, csound-expression >=5.3 && <5.4, csound-catalog >=0.7 && <0.8, csound-sampler >=0.0 && <0.1, directory >=1.2, universe-base >=1.0
+    -- hs-source-dirs:      
+    default-language:    Haskell2010

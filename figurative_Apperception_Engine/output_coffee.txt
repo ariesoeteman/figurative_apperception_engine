@@ -1,0 +1,9 @@
+clingo version 5.3.0
+Reading from temporal_axioms.lp ...
+Solving...
+UNSATISFIABLE
+
+Models       : 0
+Calls        : 1
+Time         : 127.447s (Solving: 36.76s 1st Model: 0.00s Unsat: 36.76s)
+CPU Time     : 127.399s

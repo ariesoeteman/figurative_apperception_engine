@@ -70,8 +70,6 @@ do_fig_solve :: String -> String -> Template -> String -> IO (String, [ClingoOut
 do_fig_solve dir input_f t space_time = do
     -- Generate ASP files from template
     putStrLn "Generating temporary files..."
-    putStrLn dir
-    putStrLn input_f
     (name, command, results) <- do_fig_template False t dir input_f space_time
 
     putStrLn "Done with generating temporary files..."

@@ -34,32 +34,32 @@ To run the examples, **make sure you are in the root directory called figurative
 
 
 Two sensors, one oscillates between on and off, while the other has the same reading throughout:
-   * `~/.cabal/bin/figsolve time simple.lp`
+   * `~/.cabal/bin/figSolve time simple.lp`
 
 A single sensor oscillating between on and off:
-   * `~/.cabal/bin/figsolve time simple_2.lp`
+   * `~/.cabal/bin/figSolve time simple_2.lp`
 
 A spatial construction consisting of 25 regions:
-   * `~/.cabal/bin/figsolve space space_simple.lp`
+   * `~/.cabal/bin/figSolve space space_simple.lp`
 
 
 Speeding carts and pushed pedals, where the input is a partial event structure:
-   * `~/.cabal/bin/figsolve time change.lp`
+   * `~/.cabal/bin/figSolve time change.lp`
 
 
 A coffee maker,note that this example takes about 20 hours to find the right model, and much longer to prove that it is the minimal model:
 
-   * `~/.cabal/bin/figsolve time coffee.lp`
+   * `~/.cabal/bin/figSolve time coffee.lp`
 
 
 A spatial construction with learned 'left' and 'right' movements:
 
-   * `~/.cabal/bin/figsolve space leftright.lp`
+   * `~/.cabal/bin/figSolve space leftright.lp`
 
 
 A spatial construction in which a causal rule makes observations 'irreversible', note that this example takes about 24 hours:
 
-   * `~/.cabal/bin/figsolve space change.lp`
+   * `~/.cabal/bin/figSolve space change.lp`
 
 
 ## Understanding the output of the solve process

@@ -1,9 +1,8 @@
 # figurative_apperception_engine
 
-# The source code for chapters 4 and 6 of my thesis: "Aritificial Understanding"
+# The source code for the Figurative (Spatial) Apperception Engine
 
-The code in the 'code' directory is to a large extent copied from https://github.com/RichardEvans/apperception. All other code has been written by me.
-
+The code in the 'code' directory is to a large extent derived from https://github.com/RichardEvans/apperception.
 
 ## Installation instructions
 
